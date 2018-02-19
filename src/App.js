@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import {
   ScrollView,
-  Text, UIManager,
+  Text,
+  UIManager,
   AsyncStorage,
   TouchableOpacity,
   LayoutAnimation
@@ -9,7 +10,6 @@ import {
 
 import Note from "./Note.js";
 import AddNote from "./AddNote.js";
-
 
 class App extends Component {
   state = {
@@ -62,7 +62,10 @@ class App extends Component {
 
   render() {
     return (
-      <ScrollView style={{ backgroundColor: "white" }} contentContainerStyle={{ paddingVertical: 17.5 }}>
+      <ScrollView
+        style={{ backgroundColor: "white" }}
+        contentContainerStyle={{ paddingVertical: 17.5 }}
+      >
         <TouchableOpacity onPress={() => this.setState(this.onlyShowLiked)}>
           <Text
             style={{
